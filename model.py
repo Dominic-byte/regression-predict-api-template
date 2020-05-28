@@ -47,6 +47,7 @@ def _preprocess_data(data):
     """
     # Convert the json string to a python dictionary object
     feature_vector_dict = json.loads(data)
+    
     # Load the dictionary as a Pandas DataFrame.
     feature_vector_df = pd.DataFrame.from_dict([feature_vector_dict])
 
@@ -59,8 +60,8 @@ def _preprocess_data(data):
     # ---------------------------------------------------------------
 
     # ----------- Replace this code with your own preprocessing steps --------
-    predict_vector = feature_vector_df[['Pickup Lat','Pickup Long',
-                                        'Destination Lat','Destination Long']]
+    predict_vector = feature_vector_df[["Pickup Lat","Pickup Long",
+                 "Destination Lat","Destination Long"]]
     # ------------------------------------------------------------------------
 
     return predict_vector
