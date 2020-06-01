@@ -29,6 +29,8 @@ import json
 # Feature engineering
 import geopy.distance
 
+riders = pd.read_csv('utils/data/riders.csv')
+
 def _preprocess_data(data):
     """Private helper function to preprocess data for model prediction.
 
