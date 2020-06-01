@@ -523,7 +523,6 @@ def make_prediction(data, model):
     """
     # Data preprocessing.
     prep_data = _preprocess_data(data)
-    print(prep_data)
     # Perform prediction with model and preprocessed data.
     prediction = model.predict(prep_data)
     # Format as list for output standerdisation.
