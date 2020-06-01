@@ -29,10 +29,6 @@ import json
 # Feature engineering
 import geopy.distance
 
-# Fetch training data and preprocess for modeling
-train = pd.read_csv('data/train_data.csv')
-riders = pd.read_csv('data/riders.csv')
-
 def _preprocess_data(data):
     """Private helper function to preprocess data for model prediction.
 
@@ -318,7 +314,7 @@ def _preprocess_data(data):
 
         return df1, org_features, new_features
 
-    predict_vector, org_features, new_features = data_cleaner(train, dropdiff = False)
+    predict_vector, org_features, new_features = data_cleaner(data dropdiff = False)
 
 
     return predict_vector[['Distance_KM','Average_Rating', 'Driver_exp','Pers_Business_Personal',
