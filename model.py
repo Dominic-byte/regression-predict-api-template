@@ -314,7 +314,7 @@ def _preprocess_data(data):
 
         return df1, org_features, new_features
 
-    predict_vector, org_features, new_features = data_cleaner(data dropdiff = False)
+    predict_vector, org_features, new_features = data_cleaner(data, dropdiff = False)
 
 
     return predict_vector[['Distance_KM','Average_Rating', 'Driver_exp','Pers_Business_Personal',
